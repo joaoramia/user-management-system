@@ -2,13 +2,13 @@ import { connect } from 'react-redux'
 import GroupList from '../components/GroupList'
 
 const mapStateToProps = state => {
-  return {
-    groups: state.groups
-  }
+    return {
+        groups: state.groups
+    }
 }
 
 const VisibleGroupList = connect(
-  mapStateToProps
+    mapStateToProps
 )(GroupList)
 
 export default VisibleGroupList

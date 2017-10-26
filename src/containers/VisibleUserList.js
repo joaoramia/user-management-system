@@ -2,13 +2,13 @@ import { connect } from 'react-redux'
 import UserList from '../components/UserList'
 
 const mapStateToProps = state => {
-  return {
-    users: state.users
-  }
+    return {
+        users: state.users
+    }
 }
 
 const VisibleUserList = connect(
-  mapStateToProps
+    mapStateToProps
 )(UserList)
 
 export default VisibleUserList
