@@ -12,45 +12,50 @@ let AddGroup = ({ dispatch }) => {
     let description
 
     return (
-        <div>
-            <form
-                onSubmit={e => {
-                    e.preventDefault()
-                    if (!name.value || !description.value) {
-                        return
-                    }
-                    dispatch(addGroup({name: name.value, description: description.value}))
-                    name.value = ''
-                    description.value = ''
-                }}
-                className="form"
-            >
-                <div className="form-group">
-                    <label>Name:</label>
+        <div className="card">
+            <div className="card-block">
+                <h5 className="card-title text-center">Add a new group!</h5>
+                <form
+                    onSubmit={e => {
+                        e.preventDefault()
+                        if (!name.value || !description.value) {
+                            return
+                        }
+                        dispatch(addGroup({name: name.value, description: description.value}))
+                        name.value = ''
+                        description.value = ''
+                    }}
+                    className="form"
+                >
+                    <div className="form-group">
                         <input
                         ref={node => {
                             name = node
                         }}
                         type="text"
                         className="form-control"
+                        placeholder="Name"
+                        required
                         />
-                </div>
-                
-                <div className="form-group">
-                    <label>Description</label>
-                    <input
-                    ref={node => {
-                        description = node
-                    }}
-                    type="text"
-                    className="form-control"
-                    />
-                </div>
+                    </div>
+                    
+                    <div className="form-group">
+                        <input
+                        ref={node => {
+                            description = node
+                        }}
+                        type="text"
+                        className="form-control"
+                        placeholder="Description"
+                        required
+                        />
+                    </div>
 
-                <button type="submit" className="btn btn-default">
-                    Add Group
-                </button>
-            </form>
+                    <button type="submit" className="btn btn-primary float-right">
+                        Add Group
+                    </button>
+                </form>
+            </div>
         </div>
     )
 }

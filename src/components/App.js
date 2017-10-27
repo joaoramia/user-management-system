@@ -12,14 +12,17 @@ import AddGroup from '../containers/AddGroup'
 import VisibleGroupList from '../containers/VisibleGroupList'
 
 const App = () => (
-    <div className="col-md-12">
-        <div className="col-md-6">
-            <AddUser />
-            <VisibleUserList />
-        </div>
-        <div className="col-md-6">
-            <AddGroup />
-            <VisibleGroupList />
+    <div className="col-md-12 app-component">
+        <h5 className="text-center">React App for User Management System</h5>
+        <div className="row add-cards">
+            <div className="col-md-6">
+                <AddUser />
+                <VisibleUserList />
+            </div>
+            <div className="col-md-6">
+                <AddGroup />
+                <VisibleGroupList />
+            </div>
         </div>
     </div>
 )

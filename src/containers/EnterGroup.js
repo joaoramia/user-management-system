@@ -10,7 +10,7 @@ import { enterGroup } from '../actions'
 let EnterGroup = ({ userId, groupId, dispatch }) => {
     return (
         <div>
-            <button className="btn btn-default" onClick={e => {
+            <button className="btn btn-default btn-enter" onClick={e => {
                 e.preventDefault()
                 dispatch(enterGroup(userId, groupId))
             }}>

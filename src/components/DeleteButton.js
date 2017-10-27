@@ -12,7 +12,7 @@ const DeleteButton = ({ userId, groupId, onClick }) => {
                 e.preventDefault()
                 onClick()
             }}
-            className="btn btn-default"
+            className="btn btn-default btn-delete"
         >
         Delete
         </button>

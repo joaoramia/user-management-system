@@ -13,9 +13,9 @@ const GroupDetail = ({ groups, match }) => {
     const group = groups.find(group => group.id === Number(match.params.groupId))
 
     return (
-        <div className="col-md-12">
+        <div className="col-md-12 entity-detail">
             <Group {...group} hideDelete={true}/>
-            <h3>{group.name}'s members</h3>
+            <h3 className="text-center">{group.name}'s members</h3>
             <VisibleUserList groupId={group.id} />
         </div>
     )

@@ -10,7 +10,7 @@ import { leaveGroup } from '../actions'
 let LeaveGroup = ({ userId, groupId, dispatch }) => {
     return (
         <div>
-            <button className="btn btn-default" onClick={e => {
+            <button className="btn btn-default btn-delete" onClick={e => {
                 e.preventDefault()
                 dispatch(leaveGroup(userId, groupId))
             }}>

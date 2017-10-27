@@ -14,21 +14,29 @@ import PropTypes from 'prop-types'
 import DeleteUser from '../containers/DeleteUser'
 import LeaveGroup from '../containers/LeaveGroup'
 import { NavLink } from 'react-router-dom'
+import profilePicture from '../images/profile-picture.png'
 
 const User = ({ id, name, age, groupId, hideDelete }) => {
     return (
-        <div>
-            <p>Id: {id}</p>
-            <p>Name: <NavLink to={`/user/${id}`}>{name}</NavLink></p>
-            <p>Age: {age}</p>
+        <div className="entity-block row">
+            <NavLink className="row col-md-12 entity-link" to={`/user/${id}`}>
+                <div className="col-md-6 entity-info">
+                    <h5>{name}</h5>
+                    <p>Age: {age}</p>
+                    <p>Id: {id}</p>
 
-            {/* 
-                if no groupId, assume it's in the home route, where you can delete users
-                if hideDelete is true, hide the delete button (User Detail Page)
-            */}
-            {
-                groupId === undefined ? (hideDelete ? '' : <DeleteUser userId={id}/>) : <LeaveGroup userId={id} groupId={groupId}/>
-            }
+                    {/* 
+                        if no groupId, assume it's in the home route, where you can delete users
+                        if hideDelete is true, hide the delete button (User Detail Page)
+                    */}
+                    {
+                        groupId === undefined ? (hideDelete ? '' : <DeleteUser userId={id}/>) : <LeaveGroup userId={id} groupId={groupId}/>
+                    }
+                </div>
+                <div className="col-md-6 hidden-sm-down entity-image">
+                    <img alt="picture" src={profilePicture} className="profilePicture"/>
+                </div>
+            </NavLink>
         </div>
     )
 }

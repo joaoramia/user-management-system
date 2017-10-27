@@ -17,18 +17,22 @@ import { NavLink } from 'react-router-dom'
 // otherGroups is used for the /user/:userId page, showing the groups the user is not yet a member of
 const Group = ({ id, name, description, userId, otherGroups, hideDelete }) => {
     return (
-        <div>
-            <p>Id: {id}</p>
-            <p>Name: <NavLink to={`/group/${id}`}>{name}</NavLink></p>
-            <p>Description: {description}</p>
-            
-            {/*
-                if no userId, assume it's in the home route, where you can delete groups
-                if hideDelete is true, hide the delete button (Group Detail Page)
-            */}
-            {
-                userId === undefined ? (hideDelete ? '' : <DeleteGroup groupId={id}/>) : ( otherGroups ? <EnterGroup userId={userId} groupId={id}/> : <LeaveGroup userId={userId} groupId={id}/>)
-            }
+        <div className="entity-block row">
+            <NavLink className="row col-md-12 entity-link" to={`/group/${id}`}>
+                <div className="col-md-12 entity-info">
+                    <h5>{name}</h5>
+                    <p>{description}</p>
+                    <p>Id: {id}</p>
+                    
+                    {/*
+                        if no userId, assume it's in the home route, where you can delete groups
+                        if hideDelete is true, hide the delete button (Group Detail Page)
+                    */}
+                    {
+                        userId === undefined ? (hideDelete ? '' : <DeleteGroup groupId={id}/>) : ( otherGroups ? <EnterGroup userId={userId} groupId={id}/> : <LeaveGroup userId={userId} groupId={id}/>)
+                    }
+                </div>
+            </NavLink>
         </div>
     )
 }

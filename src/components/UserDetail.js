@@ -15,11 +15,11 @@ const UserDetail = ({ users, match }) => {
     // find the user with the same id as the route param and return its details
     const user = users.find(user => user.id === Number(match.params.userId))
     return (
-        <div className="col-md-12">
+        <div className="col-md-12 entity-detail">
             <User {...user} hideDelete={true}/>
-            <h3>{user.name}'s groups</h3>
+            <h3 className="text-center">{user.name}'s groups</h3>
             <VisibleGroupList userId={user.id} />
-            <h3>Other groups that {user.name} is not yet part of:</h3>
+            <h3 className="text-center">Other groups that {user.name} is not yet part of:</h3>
             <VisibleGroupList userId={user.id} otherGroups={true} />
         </div>
     )

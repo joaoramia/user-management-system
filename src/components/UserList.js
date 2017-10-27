@@ -6,10 +6,7 @@ const UserList = ({ users, groupId }) => {
     return (
         <div>
             {
-                users.map(user => (
-                        <User key={user.id} {...user} groupId={groupId} />
-                    )
-                )
+                users.length ? users.map(user => (<User key={user.id} {...user} groupId={groupId} />)) : <p className="text-center">No users found</p>
             }
         </div>
     )

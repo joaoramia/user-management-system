@@ -4,8 +4,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Menu = ({ id, name, description }) => (
-    <div>
-        <p><Link to="/home">Home</Link></p>
+    <div className="top-nav fixed-top">
+        <Link to="/home">Home</Link>
     </div>
 )
 

@@ -13,10 +13,7 @@ const GroupList = ({ groups, userId, otherGroups }) => {
     return (
         <div>
             {
-                groups.map(group => (
-                        <Group key={group.id} {...group} userId={userId} otherGroups={otherGroups} />
-                    )
-                )
+                groups.length ? groups.map(group => (<Group key={group.id} {...group} userId={userId} otherGroups={otherGroups} />)) : <p className="text-center">No groups found</p>
             }
         </div>
     )

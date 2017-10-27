@@ -10,6 +10,7 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { createStore } from 'redux'
+import './index.css';
 
 import userManagementApp from './reducers'
 import Root from './components/Root'
@@ -17,6 +18,6 @@ import Root from './components/Root'
 let store = createStore(userManagementApp)
 
 render(
-    <Root store={store} />,
+    <Root className="root" store={store} />,
     document.getElementById('root')
 )
