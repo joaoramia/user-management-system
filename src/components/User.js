@@ -34,7 +34,7 @@ const User = ({ id, name, age, groupId, hideDelete }) => {
                     }
                 </div>
                 <div className="col-md-6 hidden-sm-down entity-image">
-                    <img alt="profilePicture" src={profilePicture} className="profilePicture"/>
+                    <img alt="profilePicture" src={profilePicture} className="profilePicture d-block mx-auto"/>
                 </div>
             </NavLink>
         </div>
