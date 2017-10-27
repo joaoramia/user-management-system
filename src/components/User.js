@@ -1,20 +1,31 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import DeleteUser from '../containers/DeleteUser'
+import LeaveGroup from '../containers/LeaveGroup'
+import { NavLink } from 'react-router-dom'
 
-const User = ({ id, name, age }) => (
-  <div>
-    <p>Id: {id}</p>
-    <p>Name: {name}</p>
-    <p>Age: {age}</p>
-    <DeleteUser userId={id}/>
-  </div>
-)
+const User = ({ id, name, age, groupId, hideDelete }) => {
+    return (
+        <div>
+            <p>Id: {id}</p>
+            <p>Name: <NavLink to={`/user/${id}`}>{name}</NavLink></p>
+            <p>Age: {age}</p>
+
+            {/* 
+                if no groupId, assume it's in the home route, where you can delete users
+                if hideDelete is true, hide the delete button (User Detail Page)
+            */}
+            {
+                groupId === undefined ? (hideDelete ? '' : <DeleteUser userId={id}/>) : <LeaveGroup userId={id} groupId={groupId}/>
+            }
+        </div>
+    )
+}
 
 User.propTypes = {
-  id: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired,
-  age: PropTypes.number.isRequired
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    age: PropTypes.number.isRequired
 }
 
 export default User

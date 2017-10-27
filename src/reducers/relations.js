@@ -6,8 +6,8 @@ const relations = (state = Relations, action) => {
             return [
                 ...state,
                 {
-                    userId: action.relation.userId,
-                    groupId: action.relation.groupId
+                    userId: action.userId,
+                    groupId: action.groupId
                 }
             ]
         case 'DELETE_RELATION':
@@ -16,7 +16,7 @@ const relations = (state = Relations, action) => {
             // find the relation that contains that user and group, and remove that line from the relation table
             state.forEach((relation, index) => {
                 console.log(action);
-                if (relation.userId === action.relation.userId && relation.groupId === action.relation.groupId) {
+                if (relation.userId === action.userId && relation.groupId === action.groupId) {
                     i = index
                 }
             })

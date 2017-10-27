@@ -14,5 +14,13 @@ export let Relations = [
     {
         userId: 1,
         groupId: 2
+    },
+    {
+        userId: 2,
+        groupId: 2
+    },
+    {
+        userId: 2,
+        groupId: 1
     }
 ]
