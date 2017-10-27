@@ -13,7 +13,7 @@ import VisibleGroupList from '../containers/VisibleGroupList'
 
 const App = () => (
     <div className="col-md-12 app-component">
-        <h4 className="text-center">a User Management System built with React</h4>
+        <h4 className="text-center">A User Management System built with React</h4>
         <div className="row add-cards">
             <div className="col-md-6">
                 <AddUser />

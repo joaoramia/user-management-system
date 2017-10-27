@@ -20,7 +20,7 @@ This app uses Redux to organize its data. This means it takes advantage of a sin
 
 The app is not taking into account that groups should not exist without users and vice versa. With more time, it could be included as a validation for the user and group models, always checking if they became empty using the relations model.
 
-Unit tests were mainly related to filtering methods for the listing of groups and users. With more time, tests with Enzyme could be done with the entire application using the state and store.
+Unit tests were mainly related to the actions and reducers related to the groups, users and relations. With more time, more tests with Enzyme could be created with the entire application using the state and store.
 
 ## Setup
 

@@ -5,7 +5,12 @@ import userManagementApp from '../reducers'
 import configureStore from 'redux-mock-store'
 import { shallow } from 'enzyme';
 
-describe('APP --- REACT-REDUX (Shallow + passing the {store} directly)',()=>{
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+configure({ adapter: new Adapter() });
+
+describe('App component',()=>{
     const initialState = {output:100}
     const mockStore = configureStore()
     let store,container

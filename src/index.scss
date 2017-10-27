@@ -48,9 +48,14 @@ body {
             border-radius: 10px 0px 0px 10px;
         }
 
+        .entity-info-group {
+            border-radius: 10px;
+        }
+
         .entity-image {
             border: 1px solid rgba(0,0,0,0.2);
             border-left: none;
+            border-radius: 0px 10px 10px 0px;
         }
     }
 

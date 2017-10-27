@@ -7,10 +7,6 @@ import { Users } from '../mocks/users'
 
 const users = (state = Users, action) => {
     switch (action.type) {
-        case 'SET_VISIBILITY_FILTER':
-            return Object.assign({}, state, {
-                visibilityFilter: action.filter
-            })
         case 'ADD_USER':
             return [
                 ...state,

@@ -6,14 +6,19 @@ import configureStore from 'redux-mock-store'
 import { createStore } from 'redux'
 import { shallow } from 'enzyme';
 
-describe('>>>H O M E --- REACT-REDUX (Shallow + passing the {store} directly)',()=>{
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+configure({ adapter: new Adapter() });
+
+describe('Group component',()=>{
     const initialState = {output:100}
     const mockStore = configureStore()
     let store,container
 
     beforeEach(()=>{
         store = mockStore(initialState)
-        container = shallow(<Group userId={0} hideDelete={false} /> )  
+        container = shallow(<Group userId={0} hideDelete={false} id={0} name={'test'} description={'testing'} /> )  
     })
 
     it('+++ render the connected(SMART) component', () => {

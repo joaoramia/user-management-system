@@ -19,7 +19,7 @@ const Group = ({ id, name, description, userId, otherGroups, hideDelete }) => {
     return (
         <div className="entity-block row">
             <NavLink className="row col-md-12 entity-link" to={`/group/${id}`}>
-                <div className="col-md-12 entity-info">
+                <div className="col-md-12 entity-info entity-info-group">
                     <h5>{name}</h5>
                     <p>{description}</p>
                     <p>Id: {id}</p>

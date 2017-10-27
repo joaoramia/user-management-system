@@ -7,10 +7,6 @@ import { Groups } from '../mocks/groups'
 
 const groups = (state = Groups, action) => {
     switch (action.type) {
-        case 'SET_VISIBILITY_FILTER':
-            return Object.assign({}, state, {
-                visibilityFilter: action.filter
-            })
         case 'ADD_GROUP':
             return [
                 ...state,
