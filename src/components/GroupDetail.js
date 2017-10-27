@@ -1,3 +1,8 @@
+/*
+    Similar to the UserDetail component, the GroupDetail will show the list of users linked to a
+    particular group. It will also give the chance to remove a user from the group
+*/
+
 import React from 'react'
 import Group from './Group'
 import PropTypes from 'prop-types'

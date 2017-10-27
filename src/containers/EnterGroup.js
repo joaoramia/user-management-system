@@ -1,3 +1,8 @@
+/*
+    EnterGroup facilitates the linking between groups and users, dispatching an action to add a new
+    link to the relations model
+*/
+
 import React from 'react'
 import { connect } from 'react-redux'
 import { enterGroup } from '../actions'

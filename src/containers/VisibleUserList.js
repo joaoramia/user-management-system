@@ -1,3 +1,7 @@
+/*
+    VisibleUserList filters the users by group and organizes them to be shown in the application
+*/
+
 import { connect } from 'react-redux'
 import UserList from '../components/UserList'
 

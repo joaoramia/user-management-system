@@ -1,3 +1,11 @@
+/*
+    Similar to the GroupDetail component, the UserDetail will show the list of groups linked to a
+    particular user. Plus, it will show a list of otherGroups, which are not yet linked to
+    that particular user.
+    
+    Finally, it will also give the chance to have a user leave or enter a group
+*/
+
 import React from 'react'
 import User from './User'
 import PropTypes from 'prop-types'

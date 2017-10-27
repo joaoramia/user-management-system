@@ -1,3 +1,8 @@
+/*
+    DeleteGroup and DeleteUser will take props from the parent component and dispatch an action
+    to a reducer to delete an entity
+*/
+
 import { connect } from 'react-redux'
 import { deleteGroup } from '../actions'
 import DeleteButton from '../components/DeleteButton'

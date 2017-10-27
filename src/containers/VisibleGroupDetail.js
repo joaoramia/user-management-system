@@ -1,3 +1,7 @@
+/*
+    VisibleGroupDetail takes the groups from the state and uses them for the /group/:groupId page
+*/
+
 import { connect } from 'react-redux'
 import GroupDetail from '../components/GroupDetail'
 

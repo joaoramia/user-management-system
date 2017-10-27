@@ -1,3 +1,9 @@
+/*
+    The App component will contain the structure of the /home page, which is a dashboard
+    with an Add and a Delete functionality for both users and groups. It will also list the
+    users and groups, providing links to their details pages
+*/
+
 import React from 'react'
 import AddUser from '../containers/AddUser'
 import VisibleUserList from '../containers/VisibleUserList'

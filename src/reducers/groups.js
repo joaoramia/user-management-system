@@ -1,3 +1,8 @@
+/*
+    The group and user reducers are very similar, they will organize the state according to actions
+    related to these entities
+*/
+
 import { Groups } from '../mocks/groups'
 
 const groups = (state = Groups, action) => {
@@ -16,19 +21,20 @@ const groups = (state = Groups, action) => {
                 }
             ]
         case 'DELETE_GROUP':
-            let i //this is the index that will be removed
+            // the index that will be removed
+            let i
 
             state.forEach((group, index) => {
-                console.log(action);
                 if (group.id === action.groupId) {
                     i = index
                 }
             })
-            state.splice(i, 1); // remove item in the index i
+            // remove item in the index i
+            state.splice(i, 1);
             return [...state]
         default:
             return state
     }
-  }
+}
   
-  export default groups
+export default groups

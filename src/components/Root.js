@@ -1,11 +1,19 @@
+/*
+    Root will take the store and structure the application, using the react-router-dom to help with
+    the routes configuration.
+    
+    Here I chose to use a /home page, a /user/:userId page and a /group/:groupId page. For each of them,
+    you specify what component will be used
+*/
+
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Provider } from 'react-redux'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
 import App from './App'
 import Menu from './Menu'
 import VisibleUserDetail from '../containers/VisibleUserDetail'
 import VisibleGroupDetail from '../containers/VisibleGroupDetail'
+import { Provider } from 'react-redux'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 const Root = ({ store }) => (
     <Provider store={store}>

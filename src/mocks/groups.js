@@ -1,3 +1,5 @@
+// Mocked groups for the initialization of the app (so it doesn't start up empty)
+
 export let Groups = [
     {
         name: 'We love comedy',

@@ -1,3 +1,7 @@
+/*
+    VisibleGroupList filters the groups by user and organizes them to be shown in the application
+*/
+
 import { connect } from 'react-redux'
 import GroupList from '../components/GroupList'
 

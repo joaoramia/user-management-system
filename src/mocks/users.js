@@ -1,3 +1,5 @@
+// Mocked users for the initialization of the app (so it doesn't start up empty)
+
 export let Users = [
     {
         name: 'Elizabeth',

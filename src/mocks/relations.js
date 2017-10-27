@@ -1,3 +1,5 @@
+// Mocked relations for the initialization of the app (so it doesn't start up empty)
+
 export let Relations = [
     {
         userId: 0,

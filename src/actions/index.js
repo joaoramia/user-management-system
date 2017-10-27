@@ -3,13 +3,13 @@
     from your application to your store. They are the only source of information for the store.
     You send them to the store using store.dispatch()".
 
-    Below you can find the user action creators and the group action creators, which are functions
-    that create actions. This is what will structure the information related to these
-    entities throughout the application.
+    Below you can find the user action creators, the group action creators and the relationship
+    action creators (which links both entities).
+    This is what will structure the information related to these entities throughout the application.
 */
 
 // User actions
-let newUserId = 5 //starts with 5 because the mocked users (../mocks/users) are 0 to 4
+let newUserId = 5 //starts with 5 because the initial mocked users (../mocks/users) are 0 to 4
 
 export const addUser = user => {
     user.id = newUserId++
@@ -27,7 +27,7 @@ export const deleteUser = userId => {
 }
 
 // Group actions
-let newGroupId = 3 //starts with 3 because the mocked groups (../mocks/groups) are 0 to 2
+let newGroupId = 3 //starts with 3 because the initial mocked groups (../mocks/groups) are 0 to 2
 
 export const addGroup = group => {
     group.id = newGroupId++
