@@ -51,7 +51,7 @@ let AddGroup = ({ dispatch }) => {
                         />
                     </div>
 
-                    <button type="submit" className="btn btn-primary float-right">
+                    <button type="submit" className="btn btn-primary float-right btn-enter">
                         Add Group
                     </button>
                 </form>

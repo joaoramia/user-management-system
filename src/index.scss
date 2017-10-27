@@ -1,3 +1,7 @@
+// This SCSS file contains all the styling for this app. I chose to put it all here
+// since it is very minimalistic and in this case of very little code, it can make it easier to
+// see everything in a single file
+
 body {
     margin: 0;
     padding: 0;
@@ -48,6 +52,11 @@ body {
             border: 1px solid rgba(0,0,0,0.2);
             border-left: none;
         }
+    }
+
+    .list-title {
+        margin-top: 30px;
+        margin-left: 30px;
     }
 
     .entity-detail {

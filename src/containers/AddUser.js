@@ -51,7 +51,7 @@ let AddUser = ({ dispatch }) => {
                         />
                     </div>
 
-                    <button type="submit" className="btn btn-primary float-right">
+                    <button type="submit" className="btn btn-primary float-right btn-enter">
                         Add User
                     </button>
                 </form>

@@ -6,6 +6,9 @@ const UserList = ({ users, groupId }) => {
     return (
         <div>
             {
+                users.length ? <h5 className="list-title">User list</h5> : ''
+            }
+            {
                 users.length ? users.map(user => (<User key={user.id} {...user} groupId={groupId} />)) : <p className="text-center">No users found</p>
             }
         </div>
